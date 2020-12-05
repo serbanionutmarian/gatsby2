@@ -14,6 +14,7 @@ class BlogIndex extends React.Component {
       <Layout>
         <SEO />
         <div className="home">
+          <Link to='/react'>React</Link>
           {posts.map(({ node }) => {
             const title = _.get(node, 'frontmatter.title') || node.fields.slug;
             let featuredImgFluid = _.get(node, 'frontmatter.featuredImage.childImageSharp.fluid');
